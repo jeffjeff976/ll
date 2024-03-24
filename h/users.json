@@ -1,0 +1,34 @@
+{
+    "sellers": [
+      {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "phone": "123-456-7890",
+        "shippingAddress": "1234 Street, City",
+        "billingAddress": "1234 Street, City",
+        "isBanned": false,
+        "password": "bob"
+      }
+     
+    ],
+    "customerSupport": [
+      {
+        "staffId": "CS001",
+        "name": "Jane Doe",
+        "password": "hashed_password_here"
+      }
+
+    ],
+    "clients": [
+      {
+        "name": "Client One",
+        "email": "client1@example.com",
+        "phone": "123-456-7890",
+        "shippingAddress": "1234 Street, City",
+        "billingAddress": "1234 Street, City",
+        "isBanned": false,
+        "password": "hashed_password_here"
+      }
+    
+    ]
+  }

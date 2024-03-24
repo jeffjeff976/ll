@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #0f9b0f, #4facfe, #021b79);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .top-right {
+    position: absolute;
+    top: 0; /* Adjusted to place at the top of the page */
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligns content to the right */
+    width: 100%; /* Ensures the container spans the full width of the page */
+    padding: 20px; /* Adds padding to avoid sticking to the edges */
+  }
+  /* Style for the heading to make it visible and appropriately spaced */
+  .form-heading {
+    position: absolute; /* Position the heading absolutely within the top-right container */
+    top: 50px; /* Adjust as needed to position the heading above the container */
+    right: 50%; /* Start at the middle of the right side */
+    transform: translateX(50%); /* Adjust horizontally to truly center the element */
+    text-align: center; /* Center the text */
+    width: auto; /* Auto width to fit the content */
+    margin: 0; /* Remove any default margin */
+    color: white; /* Ensure the text color is visible on the background */
+    font-size: 40px;
+    
+  }
+  .userlogo {
+    height: 50px;
+    width: auto;
+  }
+  .dropdown {
+    margin-left: 20px;
+    font-size: 17px
+  }
+  .form-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  .logo {
+    display: block;
+    max-width: 100px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto 20px;
+  }
+  input[type="text"], input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn {
+    flex-grow: 1;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .login-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  .signup-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  @media (max-width: 600px) {
+    .form-container {
+      width: 90%;
+    }
+    .button-container {
+      flex-direction: column;
+    }
+    .btn {
+      margin: 10px 0;
+    }
+    .top-right {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .form-heading {
+      margin-right: 0; /* Adjust for mobile */
+    }
+.let{
+	position:block;
+}
+  }
+</style>
+
+</head>
+<body>
+<h2 class="form-heading" id="formheading">Client Portal</h2>
+<div class="top-right">
+  <img src="user.png" alt="userlogo" class="userlogo"> <!-- Adjust the path to your logo -->
+  <select class="dropdown" id="portalselect" name="portalselect" onchange="updateHeading()">
+    <option value="client">Client Portal</option>
+    <option value="seller">Seller Portal</option>
+    <option value="customer">Customer Care</option>
+  </select>
+
+</div>
+
+<div class="form-container">
+  <img src="da.jpg" alt="Logo" class="logo"> <!-- Adjust the path to your logo -->
+  <form id="loginForm" >
+    <input type="text" name="email" id="email" placeholder="Username" required>
+    <input type="password" id="password" name="password" placeholder="Password" required>
+    <div class="button-container">
+      <button type="submit" class="btn login-btn">Login</button>
+      <button type="button" class="btn signup-btn">Sign Up</button>
+    </div>
+  </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
